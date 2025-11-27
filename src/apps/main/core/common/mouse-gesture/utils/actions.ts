@@ -145,11 +145,11 @@ export const actions: GestureActionRegistration[] = [
   },
   {
     name: "floorp-hide-user-interface",
-    fn: () => window.gFloorpDesign.hideUserInterface(),
+    fn: () => document?.getElementById("navigator-toolbox")?.toggleAttribute("hidden"),
   },
   {
     name: "floorp-toggle-navigation-panel",
-    fn: () => window.gFloorpDesign.toggleNavigationPanel(),
+    fn: () => document?.getElementById("nav-bar")?.toggleAttribute("hidden"),
   },
   {
     name: "gecko-stop",
